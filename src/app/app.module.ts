@@ -1,14 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { LeaveComponent } from './leave/leave.component';
+import { HomeComponent } from './home/home.component';
+
+const appRoutes : Routes = [
+  { path : 'home', component: HomeComponent},
+  { path : 'employee', component: EmployeeComponent},
+  { path : 'leave', component: LeaveComponent},
+  { path : '', redirectTo: '/home', pathMatch: 'full'},
+  { path : '**', redirectTo: '/home', pathMatch: 'full'}
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmployeeComponent,
+    LeaveComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
