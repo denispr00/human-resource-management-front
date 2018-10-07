@@ -2,7 +2,20 @@
 
 A human resource management web application
 
-<b>Tools</b>: Angular 6 </br>
+**Technical specifications :**
+>Angular 6
 <b>Description:</b> </br>
 
-<a href="http://www.linkedin.com/in/denis-prodigue-1101"> linkedin.com/in/denis-prodigue-1101 </a>
+**Features :**
+>Employee Management  
+>Attendance Management  
+>Timesheet (Time Tracker)  
+>Leave Management  
+>Scheduling(shift)  
+>Recruitment  
+>Messages and Accouncements  
+
+**Description :**  
+Human Resouce Management
+
+[linkedin.com/in/denis-prodigue-1101](http://www.linkedin.com/in/denis-prodigue-1101)

@@ -1,0 +1,34 @@
+.wrapper{
+    display: flex;
+    align-items: stretch;
+}
+
+
+
+#sidebar{
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 100vh;
+
+}
+
+#sidebar.active {
+    margin-left: -200px;
+}
+
+#sidebar li{
+    padding-left: 20px;
+}
+
+#sidebar a{
+    padding-left: 20px;
+    display: inline-block;
+}
+
+#sidebar span{
+    color:rgba(255,255,255,.5);
+}
+
+.small{
+    font-size:11px;
+}

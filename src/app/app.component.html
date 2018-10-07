@@ -1,22 +1,29 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
-<!-- As a link -->
-<nav class="navbar navbar-light bg-dark">
-<a class="navbar-brand" routerLink="/home">Human Resource Management</a>
-</nav>
+<nav class="navbar  navbar-dark bg-dark py-0 px-0">
+  <div>
+    <!-- <button class="navbar-toggler px-0" type="button" data-toggle="collapse" 
+      data-target="#sidebar" aria-controls="sidebar"
+      aria-expanded="false" aria-label="Toggle navigation" (click)="toggleSidebar()"> -->
+    <button class="navbar-toggler px-0" type="button" data-toggle="collapse" 
+      (click)="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+    <!-- As a link -->
+    <a class="navbar-brand" routerLink="/home">H<span class="small">uman</span>R<span class="small">esource</span>M<span class="small">anagement</span></a>
+  </div>
+    
+
 
 <!-- As a heading 
 <nav class="navbar navbar-light bg-light">
 <span class="navbar-brand mb-0 h1">Navbar</span>
 </nav>
 -->
-<button class="navbar-toggler" type="button" data-toggle="collapse" 
-  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-  aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
       <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
@@ -44,8 +51,68 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
-</div>
+</div> -->
+
 </nav>
 
-<router-outlet></router-outlet>
+
+<div class="wrapper">
+  
+  
+  <!-- Sidebar navigation -->
+  <div class="navbar-dark bg-dark" id="sidebar" [ngClass]="{active : !sidebarIsActive}" style="float: left">
+  
+    <ul class="navbar-nav">
+      <br/>
+      <!-- Employee -->
+      <li class="nav-item">
+        <span class="oi oi-person" title="employee" aria-hidden="true"></span>
+        <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse" aria-expanded="false">  
+          Employee
+        </a>
+
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                  <span class="oi oi-people" title="employeeList" aria-hidden="true"></span>
+                  <a class="nav-link" routerLink="/employeeList">List</a>
+              </li>
+              <li>
+                  <span class="oi oi-copywriting" title="timesheet" aria-hidden="true"></span>
+                  <a class="nav-link" routerLink="/attendance">Attendance</a>
+              </li>
+              <li>
+                  <span class="oi oi-timer" title="timesheet" aria-hidden="true"></span>
+                  <a class="nav-link" routerLink="/timesheet">Timesheet</a>
+              </li>
+          </ul>
+      </li>
+      <!-- Leave -->
+      <li class="nav-item">
+        <span class="oi oi-moon" title="leave" aria-hidden="true"></span>
+        <a class="nav-link" routerLink="/leave">Leave</a>
+      </li>
+      <!-- Scheduling -->
+      <li class="nav-item">
+        <span class="oi oi-grid-four-up" title="scheduling" aria-hidden="true"></span>
+        <a class="nav-link" routerLink="/scheduling">Scheduling</a>
+      </li>
+      <!-- Recruitment -->
+      <li class="nav-item">
+        <span class="oi oi-briefcase" title="recruitment" aria-hidden="true"></span>
+        <a class="nav-link" routerLink="/recruitment">Recruitment</a>
+      </li>
+      <!-- Documents -->
+      <li class="nav-item">
+        <span class="oi oi-document" title="documents" aria-hidden="true"></span>
+        <a class="nav-link" routerLink="/documents">Documents</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <router-outlet></router-outlet>
+  
+</div>
+          
+
 

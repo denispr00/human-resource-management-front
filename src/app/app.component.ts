@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  sidebarIsActive : boolean;
+
+  ngOnInit(){
+    this.sidebarIsActive = false;
+  }
+
+  toggleSidebar(){
+    this.sidebarIsActive = !this.sidebarIsActive;
+  }
+  
 }
