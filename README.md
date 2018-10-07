@@ -1,10 +1,10 @@
 # Human Resource Management (frontend)
 
-A human resource management web application
+A human resource management web application  
 
 **Technical specifications :**
->Angular 6
-<b>Description:</b> </br>
+>Angular 6  
+
 
 **Features :**
 >Employee Management  
@@ -15,7 +15,7 @@ A human resource management web application
 >Recruitment  
 >Messages and Accouncements  
 
-**Description :**  
-Human Resouce Management
+**Description :**
+Human Resouce Management  
 
 [linkedin.com/in/denis-prodigue-1101](http://www.linkedin.com/in/denis-prodigue-1101)
